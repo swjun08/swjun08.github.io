@@ -1,71 +1,81 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
-title: Your awesome title
-email: your-email@example.com
+title: Dev Robin Blog
+email: robinseojun0625@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Welcome to my blog!
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "https://swjun08.github.io" # the base hostname & protocol for your site
+#twitter_username: your-twitter-username
+github_username:  swjun08
 
 # Build settings
 remote_theme: ngzhio/jekyll-theme-hamilton
 plugins:
   - jekyll-remote-theme
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
-# Site settings
-title: Dev Robin blog
-disqus: swjun08
-#google_analytics: your-google-analytics-tracking-id
+# Optional settings
+author:
+  name: Seojun Park
+  #avatar: /path/to/avatar.png
+  #bio: "Your bio"
+  location: Your Location
+  email: your-email@example.com
+  links:
+    #- title: Twitter
+     # url: https://twitter.com/your-twitter-username
+      #icon: fab fa-twitter
+    - title: GitHub
+      url: https://github.com/swjun08
+      icon: fab fa-github
 
-# Optional parameters
-author: Seojun Park
-#avatar: /path/to/avatar.png
-email: your-email@example.com
-location: Your Location
+paginate: 5
+paginate_path: "/page/:num/"
+timezone: America/New_York # Set your timezone
+
+# Customization
 skin: daylight
 lang: en
-paginate: 5
 date_format: "%b %-d, %Y"
 subscribe: true
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+
+# SEO and Analytics
+google_analytics: UA-XXXXXXXXX-X
+disqus: swjun08
+
+# Navigation
+navigation:
+  - title: Home
+    url: /
+  - title: About
+    url: /about/
+  - title: Categories
+    url: /categories/
+  - title: Tags
+    url: /tags/
+  - title: Contact
+    url: /contact/
+
+# Social Links
+social:
+  #- title: Twitter
+   # url: https://twitter.com/your-twitter-username
+    #icon: fab fa-twitter
+  - title: GitHub
+    url: https://github.com/swjun08
+    icon: fab fa-github
+  #- title: LinkedIn
+   # url: https://www.linkedin.com/in/your-linkedin-username
+   # icon: fab fa-linkedin
+
+# Excludes
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
